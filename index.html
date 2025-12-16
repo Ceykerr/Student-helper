@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ceyker – Gestor de Tareas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Student Helper</h1>
+    <button id="btnAdd">+ Nueva tarea</button>
+  </header>
+
+  <main class="container">
+    <section class="filters">
+      <select id="filterPriority">
+        <option value="">Todas las prioridades</option>
+        <option value="Alta">Alta</option>
+        <option value="Media">Media</option>
+        <option value="Baja">Baja</option>
+      </select>
+    </section>
+
+    <section id="tasks" class="grid"></section>
+  </main>
+
+  <!-- Modal formulario -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <h2 id="modalTitle">Nueva tarea</h2>
+      <form id="taskForm">
+        <input type="hidden" id="taskId" />
+        <label>Título
+          <input type="text" id="title" required />
+        </label>
+        <label>Descripción
+          <textarea id="description" rows="3"></textarea>
+        </label>
+        <label>Materia
+          <input type="text" id="subject" />
+        </label>
+        <label>Fecha de entrega
+          <input type="date" id="date" required />
+        </label>
+        <label>Prioridad
+          <select id="priority">
+            <option>Alta</option>
+            <option>Media</option>
+            <option>Baja</option>
+          </select>
+        </label>
+        <div class="actions">
+          <button type="submit">Guardar</button>
+          <button type="button" id="btnCancel">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
